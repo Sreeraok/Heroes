@@ -9,8 +9,8 @@ version: 0.2
      # key: "value"
 
 phases:
-#  install:
-#    commands:
+  install:
+    commands:
    - npm install
    - npm install -g @angular/cli
   #pre_build:
