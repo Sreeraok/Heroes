@@ -22,7 +22,7 @@ phases:
     - ng build 
   post_build:
     commands:
-    - aws s3 sync ./dist s3://code43-s3-stack-s3bucket-1d8hdif1vfenc
+    - aws s3 sync ./dist s3://serverless-app-heroes-sl
 #artifacts:
   #files:
     # - location
