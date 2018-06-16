@@ -7,7 +7,6 @@ env:
 phases:
     install:
         commands:
-        - sudo apt-get install -y nodejs
         - echo Installing source NPM dependencies...
         # Need https driver.
         - sudo apt-get update -y
