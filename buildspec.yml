@@ -9,17 +9,16 @@ version: 0.2
      # key: "value"
 
 phases:
-  install:
-    commands:
-    - npm install
-    - npm install -g angular-cli
+#  install:
+#    commands:
+   # - sudo apt-get update && apt-get clean && sudo npm install && sudo npm install -g @angular/cli
   #pre_build:
     #commands:
       # - command
       # - command
   build:
     commands:
-    - ng build 
+    sudo apt-get update && sudo apt-get install -y ruby ruby-dev && apt-get clean && sudo gem install compass && sudo npm install && sudo npm install grunt-cli && sudo npm install bower && sudo ./node_modules/bower/bin/bower install --allow-root && sudo ./node_modules/grunt-cli/bin/grunt build
   post_build:
     commands:
     - aws s3 sync ./dist s3://serverless-app-heroes-sl
