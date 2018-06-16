@@ -9,24 +9,20 @@ version: 0.2
      # key: "value"
 
 phases:
-  #install:
-    #commands:
-      # - command
-      # - command
+  install:
+    commands:
+      - npm install 
+	  - npm install @angular/material 
   #pre_build:
     #commands:
       # - command
       # - command
   build:
     commands:
-      - npm install 
-	  - npm install @angular/material 
 	  - npm build 
+  post_build:
+    commands:
 	  - aws s3 sync ./dist s3://code43-s3-stack-s3bucket-1d8hdif1vfenc
-  #post_build:
-    #commands:
-      # - command
-      # - command
 #artifacts:
   #files:
     # - location
