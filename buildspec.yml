@@ -20,7 +20,7 @@ phases:
       # - command
   build:
     commands:
-    - ng build
+    - npm run ng build
   post_build:
     commands:
     - aws s3 sync ./dist s3://serverless-app-heroes-sl
