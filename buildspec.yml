@@ -25,7 +25,7 @@ phases:
         commands:
         # Builds Angular application.
         - echo Build started on `date`
-        - ng build
+        - ng build -dev
 
     post_build:
         commands:
