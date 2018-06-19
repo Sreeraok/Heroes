@@ -16,7 +16,7 @@ phases:
         - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
         - sudo apt-get update -y
         - sudo apt-get install -y yarn
-        # Install Angular CLI
+        # Install Angular CLI and dependencies
         - yarn global add @angular/cli@1.7.0
         # Install node dependancies.
         - yarn install
